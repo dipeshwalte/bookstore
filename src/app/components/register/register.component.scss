@@ -1,0 +1,67 @@
+p{
+  margin-bottom: 0px;
+}
+mat-hint{
+  color:red;
+}
+.mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 0px;
+}
+.mat-form-field-flex {
+  display: inline-flex;
+  align-items: baseline;
+  box-sizing: border-box;
+  width: 310px;
+}
+
+.login-signup-select {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  .login-select {
+    .login-and-underline {
+      h1 {
+        font: normal normal medium Roboto;
+        font-size: 33px;
+        color: #878787;
+      }
+     
+    }
+  }
+  .signup-select {
+    .signup-underline {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font: normal normal medium Roboto;
+        font-size: 33px;
+        margin-bottom: 10px;
+      }
+      .underline {
+        background-color: #A03037;
+        height: 5px;
+        width: 22px;
+        align-self: center;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+.password-container{
+  //height: 50px;
+  input{
+    
+    height: 20px;
+  }
+  mat-icon{
+    color:gray;
+  }
+}
+
+.buttonSignup{
+  color:white;
+  background-color: #A03037;
+  width:300px;
+}

@@ -1,0 +1,48 @@
+<div [formGroup]="registerForm">
+  <div class="login-signup-select">
+    <div class="login-select">
+      <div class="login-and-underline" (click)=showLogin()>
+        <H1>LOGIN</H1>
+        <div class="underline"></div>
+      </div>
+    </div>
+    <div class="signup-select" >
+      <div class="signup-underline" (click)=showSignup()>
+        <H1>SIGNUP</H1>
+        <div class="underline"></div>
+      </div>
+    </div>
+  </div>
+  <div class="fullname">
+    <p>Full Name</p>
+    <mat-form-field appearance="outline" class="noWrapper" >
+      <input matInput placeholder="" formControlName="fullname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fullname.errors }"/>
+      <mat-hint *ngIf="submitted && f.fullname.errors">Enter your full name</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="emailId">
+    <p>Email Id</p>
+    <mat-form-field appearance="outline" class="noWrapper" >
+      <input matInput placeholder="" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+      <mat-hint *ngIf="submitted && f.email.errors">Enter your email id</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="password-container">
+    <p>Password</p>
+    <mat-form-field appearance="outline">
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <mat-hint *ngIf="submitted && f.password.errors">Enter your password</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="mobilenumber">
+    <p>Mobile Number</p>
+    <mat-form-field appearance="outline" class="noWrapper" >
+      <input matInput placeholder="" formControlName="mobile" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.mobile.errors }"/>
+      <mat-hint *ngIf="submitted && f.mobile.errors">Enter your mobile number</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="button">
+    <button mat-flat-button class="buttonSignup" (click)=submit()>Signup</button>
+  </div>
+  </div>
