@@ -8,7 +8,10 @@ import { MatIconModule} from '@angular/material/icon';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
 import {MatButtonModule} from '@angular/material/button';
+import {MatRadioButton} from '@angular/material/radio';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatFormField} from '@angular/material/form-field'
+//import {MatToolbar} from '@angular/material/toolbar'
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,17 +20,31 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { BookDisplayComponent } from './components/book-display/book-display.component';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { StartRatingComponent } from './components/start-rating/start-rating.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
+import { CartComponent } from './components/cart/cart.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     SignupComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    BookDisplayComponent,
+    BookDetailsComponent,
+    StartRatingComponent,
+    WishlistComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    //MatFormField,
     MatInputModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -37,6 +54,8 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
     MatButtonModule,
     MatSnackBarModule,
+    //MatRadioButton,
+   // MatToolbar,
    // MatSidenavModule,
   //  MatDialogModule,
     //MatDialog,

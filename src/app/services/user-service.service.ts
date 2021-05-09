@@ -20,5 +20,11 @@ export class UserServiceService {
   resetPassword = (data: any) => {
     return this.httpservice.post(`${UserServiceService.url}User/ResetPassword`, data);
   };
-
+  ////////////////////////////////////////////////////////////////////
+  getBooks = () =>{
+    return this.httpservice.get(`${UserServiceService.url}Book`);
+  }
+  getBook = (id:number) =>{
+    return this.httpservice.get(`${UserServiceService.url}Book/${id}`)
+  }
 }

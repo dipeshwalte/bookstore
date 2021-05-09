@@ -1,0 +1,105 @@
+@mixin addSubtract{
+  background-color: #FAFAFA;
+          color:#DBDBDB;
+          border:1px solid #DBDBDB;
+          border-radius: 50%;
+          width: 30px;
+          cursor: pointer;
+          margin-left: 5px;
+          margin-right:5px;
+}
+// .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle , .mat-radio-outer-circle {
+//   border-color: red !important;
+// }
+
+// .mat-radio-button.mat-accent .mat-radio-inner-circle{
+//   background-color: red !important;
+// }
+.cart-container { 
+  border:1px solid #DCDCDC;
+	padding: 10px 20px 10px 20px;
+  margin-top: 30px;
+  margin-left:150px;
+  margin-right:350px;
+  margin-bottom: 10px;
+  .cart-header { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+		h2 { 
+
+		}
+
+		mat-form-field { 
+      display: flex;
+			select { 
+
+			}
+		}
+	}
+
+	.cart-info-container { 
+    display: flex;
+		.image-container { 
+
+			img { 
+
+			}
+		}
+
+		.increase-quantity-container { 
+      margin-left: 20px;
+      .book-description { 
+        padding-left:20px;
+        h2 { 
+          margin-bottom: 2px;
+        }
+    
+        p { 
+          margin-bottom: 2px;
+        }
+    
+        
+    
+        .price-container { 
+          .dicounted-price { 
+            margin-top: 10px;
+            font-size: large;
+          }
+          .actual-price {
+            margin-top: 10px;
+            margin-left: 5px; 
+            text-decoration: line-through;
+            color: gray;
+          }
+        }
+      }
+		
+
+			.increase-quantity { 
+        margin-top:10px;
+        display: flex;
+        align-items: center;
+				.decrease-button { 
+          @include addSubtract();
+				}
+
+				.input-quantity { 
+          width: 30px;
+          height:30px;
+          text-align: center;
+          border:1px solid #DCDCDC;
+				}
+
+				.increase-button { 
+          @include addSubtract();
+				}
+
+				.remove-container { 
+          margin-left: 10px;
+          cursor: pointer;
+				}
+			}
+		}
+	}
+}

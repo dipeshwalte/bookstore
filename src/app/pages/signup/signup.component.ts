@@ -17,6 +17,7 @@ export class SignupComponent implements OnInit {
   emailId = "Email Id";
   password = "Password";
   confirm = "Confirm";
+  signupShown:boolean = true;
   constructor(
     private formBuilder: FormBuilder,
    // private service:UserService,
@@ -34,6 +35,13 @@ export class SignupComponent implements OnInit {
       confirmPassword: ['', [Validators.required, Validators.minLength(6)]]
   });
   }
-  
+  showSignup(){
+    this.signupShown = true;
+    this.router.navigate(['register'],{relativeTo:this.acRoute});
+  }
+  showLogin(){
+    this.signupShown = false;
+    this.router.navigate(['login'],{relativeTo:this.acRoute});
+  }
   get f() { return this.registerForm.controls; }
 }

@@ -51,9 +51,11 @@ export class LoginComponent implements OnInit {
     }
     this.service.login(data).subscribe((dataReturned:any) =>{ 
       console.log(dataReturned);
-     //localStorage.setItem("emailId",dataReturned.data.emailId);
-     //localStorage.setItem("token",dataReturned.data.token);
-      this.snackBar.open("Login Successful","Okay")
+     localStorage.setItem("emailId",dataReturned.data.emailId);
+     localStorage.setItem("token",dataReturned.data.token);
+      //this.snackBar.open("Login Successful","Okay")
+      this.router.navigate(['dashboard']);
+
     })
 }
 

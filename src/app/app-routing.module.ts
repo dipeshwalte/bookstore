@@ -1,19 +1,36 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BookDetailsComponent } from './components/book-details/book-details.component';
+import { BookDisplayComponent } from './components/book-display/book-display.component';
+import { CartComponent } from './components/cart/cart.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { SignupComponent } from './pages/signup/signup.component';
 
 const routes: Routes = [
-  { path: 'register', component: SignupComponent ,
+  {
+    path: '',
+    component: SignupComponent,
     children: [
-      {path: 'signup',component: RegisterComponent},
-      {path: 'login',component:LoginComponent}
-    ]}
+      { path: 'register', component: RegisterComponent },
+      { path: 'login', component: LoginComponent },
+    ],
+  },
+  { path: 'dashboard', component:DashboardComponent,
+    children: [
+      { path: 'books',component:BookDisplayComponent},
+      { path: 'details/:bookId',component:BookDetailsComponent},
+      { path: 'wishlist',component:WishlistComponent},
+      { path: 'cart',component:CartComponent}
+    ]
+
+},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

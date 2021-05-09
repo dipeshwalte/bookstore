@@ -1,0 +1,48 @@
+
+  .book-description { 
+    h2 { 
+      margin-bottom: 2px;
+    }
+
+    p { 
+      margin-bottom: 2px;
+      color:#878787;
+    }
+
+    
+
+    .price-container { 
+      .dicounted-price { 
+        margin-top: 10px;
+        font-size: large;
+      }
+      .actual-price {
+        margin-top: 10px;
+        margin-left: 5px; 
+        text-decoration: line-through;
+        color: gray;
+      }
+    }
+  }
+
+.wishlist-container { 
+  margin-left: 170px;
+  margin-right: 170px;
+  border: 1px solid #E4E4E4;
+	.wishlist-header { 
+    background-color: #F5F5F5;
+		h2 { 
+
+		}
+	}
+
+	.book-container { 
+		
+		.delete-container { 
+
+			mat-icon { 
+
+			}
+		}
+	}
+}
