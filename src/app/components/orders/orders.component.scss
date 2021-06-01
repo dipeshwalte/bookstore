@@ -29,7 +29,6 @@
   margin-top:40px; 
   margin-left: 170px;
   margin-right: 170px;
-  border: 1px solid #E4E4E4;
 	.wishlist-header { 
     display: flex;
     align-items: center;
@@ -41,7 +40,8 @@
 		}
 	}
   .book-and-delete-container{
-    border-top: 1px solid #E4E4E4;
+    margin-top:30px;
+    border: 1px solid #E4E4E4;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,11 +56,16 @@
       
     }
     .delete-container { 
-
-			mat-icon { 
-        margin-right: 40px;
-        color:#878787
-			}
+      display: flex;
+      align-items:  baseline;
+      margin-right: 30px;
+			.green-dot{
+          background-color: green;
+          height: 10px;
+          width: 10px;
+          border-radius: 100px;
+          margin-right: 5px;
+      }
 		}
   }
 

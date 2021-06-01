@@ -26,6 +26,10 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import { StartRatingComponent } from './components/start-rating/start-rating.component';
 import { WishlistComponent } from './components/wishlist/wishlist.component';
 import { CartComponent } from './components/cart/cart.component';
+import { OrdersComponent } from './components/orders/orders.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { PlacedComponent } from './components/placed/placed.component';
+import { TestComponent } from './pages/test/test.component';
 
 
 @NgModule({
@@ -39,7 +43,11 @@ import { CartComponent } from './components/cart/cart.component';
     BookDetailsComponent,
     StartRatingComponent,
     WishlistComponent,
-    CartComponent
+    CartComponent,
+    OrdersComponent,
+    ProfileComponent,
+    PlacedComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

@@ -51,6 +51,7 @@
 <div class="customer-details-container">
   <div class="customer-details-header">
     <h2>Customer Details</h2>
+    <button mat-stroked-button class="address-color">Add New Address</button>
   </div>
   <div class="input-fields-container">
     <div class="personal-details-container">
@@ -79,10 +80,14 @@
     </div>
     <div class="type-container">
       <span>Type</span>
+      <div class="radio-buttons-container">
+        <input type="radio" name="type" id="home">
       <label for="home">Home</label>
-      <input type="radio" name="type" id="home">
-      <input type="radio" name="type" id="">
-      <input type="radio" name="type" id="">
+      <input type="radio" name="type" id="work">
+      <label for="home">Work</label>
+      <input type="radio" name="type" id="other">
+      <label for="home">Other</label>
+      </div>
       <!-- <mat-radio-group aria-label="Select an option">
         <mat-radio-button value="1">Option 1</mat-radio-button>
         <mat-radio-button value="2">Option 2</mat-radio-button>
@@ -91,4 +96,31 @@
     </div>
   </div>
   
+</div>
+<div class="cart-container">
+  <div class="cart-header">
+    <h2>Order Summary</h2>
+  </div>
+  <div class="cart-info-container">
+    <div class="image-container">
+      <img src="../../../assets/books/Image 11.png" alt="">
+    </div>
+    <div class="increase-quantity-container">
+      <div class="book-description">
+        <h2>{{Book["name"]}}</h2>
+        <p>by {{Book["author"]}}</p>
+        <div class="price-container" fxLayout="row">
+          <div class="dicounted-price">
+            <b>Rs. {{Book["discountPrice"]}}</b>
+          </div>
+          <div class="actual-price">
+            Rs. {{Book["price"]}}
+          </div>
+        </div>
+      </div>
+      <div class="checkout-button">
+        <button mat-raised-button class="checkout">Checkout</button>
+      </div>
+    </div>
+  </div>
 </div>

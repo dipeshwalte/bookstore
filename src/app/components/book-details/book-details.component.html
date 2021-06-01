@@ -4,8 +4,8 @@
       <img src="../../../assets/books/Image 11@2x.png" alt="">
     </div>
     <div class="action-buttons">
-      <button mat-stroked-button class="add-to-bag">ADD TO BAG</button>
-      <button mat-stroked-button class="add-to-wishlist">
+      <button mat-stroked-button class="add-to-bag" (click)=AddToBag()>ADD TO BAG</button>
+      <button mat-stroked-button class="add-to-wishlist" (click)=AddToWishlist()>
         <mat-icon>favorite</mat-icon>
         WISHLIST
       </button>
@@ -56,8 +56,25 @@
           <textarea matInput
                     cdkTextareaAutosize
                     cdkAutosizeMinRows="4"
-                    cdkAutosizeMaxRows="5"></textarea>
+                    cdkAutosizeMaxRows="5" [(ngModel)]="Review"></textarea>
         </mat-form-field>
+        <button mat-raised-button class="submit-button" (click)=onFeedbackClicked()>Submit</button>
+      </div>
+      <div class="customer-ratings">
+        <div class="profile-circle-container">
+          <div class="profile-circle">
+            AC
+          </div>
+        </div>
+        
+        <div class="customer-rating-content">
+          <h2>Aniket Chile</h2>
+          <app-start-rating [rating]="3"  [starCount]="5"></app-start-rating>
+          <p>Good Product. Even though the translation could have been better. Chanakya neeti's
+             are thought proviking. Chanakya has written on many different topics and his writings
+             are succinct.
+          </p>
+        </div>
       </div>
     </div>
   </div>

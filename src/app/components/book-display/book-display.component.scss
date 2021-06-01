@@ -39,6 +39,9 @@
     cursor: pointer;
     padding-left:20px;
 		h2 { 
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
       margin-bottom: 2px;
 		}
 
