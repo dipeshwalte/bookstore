@@ -39,7 +39,7 @@ export class UserServiceService {
     return this.httpservice.post(`${UserServiceService.url}Feedback`,data,true,this.getHeaders());
   }
   getFeedback = (id:number)=>{
-    return this.httpservice.get(`${UserServiceService.url}Feedback/${id}`);
+    return this.httpservice.get(`${UserServiceService.url}Feedback/${id}`,true,this.getHeaders());
   }
   //-----------------------------------------------------------------
   addToWishList = (id:number)=>{

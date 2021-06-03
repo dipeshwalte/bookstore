@@ -13,7 +13,8 @@ export class BookDetailsComponent implements OnInit {
  // starColor:StarRatingColor = StarRatingColor.accent;
   Book:object;
   bookIdentifier:string;
-  Review:string = "";  
+  Review:string = "";
+  ratingsArray:any; 
   constructor(private activatedRoute:ActivatedRoute,
     private service:UserServiceService,
     private snackbar:MatSnackBar) { }
@@ -23,8 +24,15 @@ export class BookDetailsComponent implements OnInit {
       this.Book = dataReturned.data;
     })
   }
+  getReviews(id:number){
+    this.service.getFeedback(id).subscribe((dataReturned:any)=>{
+      console.log(dataReturned);
+      this.ratingsArray = dataReturned.data;
+    })
+  }
   ngOnInit(): void {
     this.getBook(parseInt(this.activatedRoute.snapshot.paramMap.get("bookId")));
+    this.getReviews(parseInt(this.activatedRoute.snapshot.paramMap.get("bookId")));
   }
   onRatingChanged(rating){
     console.log(rating);
@@ -56,6 +64,5 @@ export class BookDetailsComponent implements OnInit {
     })
   }
   AddToBag(){
-
   }
 }

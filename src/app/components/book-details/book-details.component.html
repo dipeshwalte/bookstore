@@ -60,22 +60,22 @@
         </mat-form-field>
         <button mat-raised-button class="submit-button" (click)=onFeedbackClicked()>Submit</button>
       </div>
+      <div class="all-customer-ratings" *ngFor="let ratingObj of ratingsArray">  
       <div class="customer-ratings">
         <div class="profile-circle-container">
           <div class="profile-circle">
             AC
           </div>
         </div>
-        
         <div class="customer-rating-content">
-          <h2>Aniket Chile</h2>
-          <app-start-rating [rating]="3"  [starCount]="5"></app-start-rating>
-          <p>Good Product. Even though the translation could have been better. Chanakya neeti's
-             are thought proviking. Chanakya has written on many different topics and his writings
-             are succinct.
+          <h2>{{ratingObj["fullName"]}}</h2>
+          <!-- <h2>{{ratingObj | stringify}}</h2> -->
+          <app-start-rating [rating]=ratingObj.rating  [starCount]="5"></app-start-rating>
+          <p>{{ratingObj["review"]}}
           </p>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </div>
